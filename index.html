@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Website</title>
+
+    <!-- My Own Style -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- CDN Fontawesome -->
+    <script src="https://kit.fontawesome.com/e9942160ab.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar-container" id="myTopnav">
+            <!-- Navbar Logo -->
+            <div class="header-logo">
+                <a href="index.html"><img src="assets/logo/logo_newWave_green.svg" alt=""></a>
+            </div>
+
+            <!-- Navigation List -->
+            <nav class="nav-list">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+                <ul>
+                    <li><button type="checkbox" onclick="myFunction()">Show Aside</button></li>
+                    <li><a href="event.html">Event</a></li>
+                    <li><a href="#">Atraksi</a></li>
+                    <li><a href="#">Olahraga</a></li>
+                    <li><input type="search" id="searchBox" placeholder="Cari disini..."></li>
+                    <li>
+                        <button>
+                            <a id="loginButton" href="#">Login <i class="fa-solid fa-right-to-bracket"></i></a>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="jumbotron">
+            <!-- Videoplayback on Jumbotron -->
+            <video autoplay muted loop id="headerVideo" src="assets/images/videoplayback.webm" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <!-- Jumbotron Content -->
+            <div class="color-overlay">
+                <div class="event-title">
+                    <div class="dateLocation-event">
+                        <div class="date-event">
+                            <p>11 - 12 Mar</p>
+                            <h4>2023</h4>
+                        </div>
+                        <div class="location-event">
+                            <h3>Stadion<br>GBK</h3>
+                        </div>
+                    </div>
+                    <h1>BLACK PINK</h1>
+                    <a href="">Get Tickets Now &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="highlight-event">
+                    <a class="highlight-card" href="">
+                        <div class="event-container" id="one-ok-rock">
+                            <div class="event-overlay">
+                                <div class="date">
+                                    <h2>15</h2>
+                                    <p>Jan</p>
+                                </div>
+                                <div class="band">
+                                    <h2>ONE OK ROCK</h2>
+                                    <p>Stadion GBK, Jakarta</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="highlight-card" href="">
+                        <div class="event-container" id="radwimps">
+                            <div class="event-overlay">
+                                <div class="date">
+                                    <h2>30</h2>
+                                    <p>July</p>
+                                </div>
+                                <div class="band">
+                                    <h2>RADWIMPS</h2>
+                                    <p>Basket Hall Senayan GBK, Jakarta</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <article>
+                <!-- Section Rekomendasi Terbaik -->
+                <section id="rekomendasi-terbaik">
+                    <!-- Title Section -->
+                    <div class="header-section">
+                        <div class="title-section">
+                            <h2>Rekomendasi Terbaik</h2>
+                            <a href="#">Lihat Semua</a>
+                        </div>
+                        <div class="arrow-button">
+                            <a href="">
+                                <div class="icon-button">
+                                    <i class="fa-solid fa-arrow-left icon-hover"></i>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="icon-button">
+                                    <i class="fa-solid fa-arrow-right icon-hover"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Flexbox item -->
+                    <div class="card-section">
+                        <a id="card-1" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_1.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Jakarta Pusat</p>
+                                        <p>01 May 2023</p>
+                                    </div>
+                                    <h1 class="event-title">Jakarta Mods Mayday 2023</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>297.768</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a id="card-2" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_2.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Jakarta Utara</p>
+                                        <p>05 - 06 Aug 2023</p>
+                                    </div>
+                                    <h1 class="event-title">Kaguya J-Fest Matsuri 2023</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>297.768</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a id="card-3" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_3.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Bali</p>
+                                        <p>29 April 2023</p>
+                                    </div>
+                                    <h1 class="event-title">BAD MANNERS LIVE IN BALI</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>297.768</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a id="card-4" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_4.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Jakarta Utara</p>
+                                        <p>11 - 13 Aug 2023</p>
+                                    </div>
+                                    <h1 class="event-title">The Sounds Project Vol.6</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>297.768</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a id="card-5" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_5.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Yogyakarta</p>
+                                        <p>10 June 2023</p>
+                                    </div>
+                                    <h1 class="event-title">Sua Suara 2023 by ADiTV</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>297.768</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Section Event Terbaru -->
+                <section id="event-terbaru">
+                    <!-- Title Section -->
+                    <div class="header-section">
+                        <div class="title-section">
+                            <h2>Event Terbaru</h2>
+                            <a href="#">Lihat Semua</a>
+                        </div>
+                        <div class="arrow-button">
+                            <a href="">
+                                <div class="icon-button">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="icon-button">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Flexbox Item -->
+                    <div class="card-section">
+                        <a id="card-1" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_19.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Jakarta Pusat</p>
+                                        <p>18 Jan 2025</p>
+                                    </div>
+                                    <h1 class="event-title">DEWA 19 feat Allstars 2.0</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>589.305</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a id="card-2" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_16.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Jakarta Barat</p>
+                                        <p>28 Sept - 31 Okt 2024</p>
+                                    </div>
+                                    <h1 class="event-title">The Fact Music Awards Exhibition BSTARVERSE BTS</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>299.700</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a id="card-3" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_18.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Jakarta Selatan</p>
+                                        <p>23 Nov 2024</p>
+                                    </div>
+                                    <h1 class="event-title">Day and Night, Fan-Con Choi Jin Hyuk</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>1.087.968</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a id="card-4" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_9.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Malaysia</p>
+                                        <p>01 - 03 Nov 2024</p>
+                                    </div>
+                                    <h1 class="event-title">PETRONAS Grand Prix of Malaysia 2024</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>100.000</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a id="card-5" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_10.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>ICE BSD Tangerang</p>
+                                        <p>14 Feb 2025</p>
+                                    </div>
+                                    <h1 class="event-title">THE SCRIPT Satellites World Tour</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>780.000</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Section CTA -->
+                <section>
+                    <div class="cta-section">
+                        <div class="cta-overlay">
+                            <div class="cta-event">
+                                <h5>03 March 2024</h5>
+                                <h5>JIEXPO Kemayoran</h5>
+                                <h1>TULUS</h1>
+                            </div>
+                            <a href="">Get Tickets Now &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section Olahraga -->
+                <section id="olahraga">
+                    <!-- Title Section -->
+                    <div class="header-section">
+                        <div class="title-section">
+                            <h2>All Sports</h2>
+                            <a href="#">Lihat Semua</a>
+                        </div>
+                        <div class="arrow-button">
+                            <a href="">
+                                <div class="icon-button">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="icon-button">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Flexbox Item -->
+                    <div class="card-section">
+                        <a id="card-1" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_11.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Parepare</p>
+                                        <p>16 April 2023</p>
+                                    </div>
+                                    <h1 class="event-title">BRI LIGA 1 PSM Makassar vs Borneo FC</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>60.000</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a id="card-2" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_12.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Bogor</p>
+                                        <p>07 Aug 2023</p>
+                                    </div>
+                                    <h1 class="event-title">Persikabo 1973 vs Persis Solo</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>60.000</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a id="card-3" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_13.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Bogor</p>
+                                        <p>01 Sept 2023</p>
+                                    </div>
+                                    <h1 class="event-title">AFC CUP 2023 PSM Makassar vs Laos Toyota FC</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>297.768</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a id="card-4" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_14.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Cimahi</p>
+                                        <p>27 - 28 May 2024</p>
+                                    </div>
+                                    <h1 class="event-title">Friendly Match PSM Makassar vs Sulut United</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>60.000</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a id="card-5" href="">
+                            <div class="card-item">
+                                <img class="event-image" src="assets/images/img_item_15.png" alt="">
+                                <div class="event-item">
+                                    <div class="location-container">
+                                        <p>Phuket Thailand</p>
+                                        <p>12 Okt - 31 Des 2024</p>
+                                    </div>
+                                    <h1 class="event-title">Patong Boxing Stadium Muay Thai</h1>
+                                    <div class="pricing-container">
+                                        <div class="pricing">
+                                            <p>Mulai Dari</p>
+                                            <h3><Span>Rp. </Span>638.000</h3>
+                                        </div>
+                                        <p>Tiket Tersedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+
+        <!-- Aside Content -->
+        <!-- By default visible=false, you can show it on Navbar called "Show Aside". But if it don't show at first try, try it for second time-->
+        <aside class="aside-show" id="aside">
+            <div class="social-media">
+                <div class="aside-container">
+                    <div class="avatar-container">
+                        <div class="avatar">
+                            <img src="assets/images/img_fakhri.jpg" alt="">
+                        </div>
+                        <p>Hello there, my name is <strong>Mohamad Nurfakhrian Aziz</strong>. You can go by <strong>Fakhri</strong>.</p>
+                    </div>
+                    <div class="profile-container">
+                        <p>I am a UI/UX designer with 4 years of experience, and I enjoy helping solve user problems. When I find an idea for an application or website, I usually immediately create a PRD for myself to creating a wireframe or UI design.</p>
+                        <p>I like to create UI kits in my spare time to continue practicing my UI/UX design skills. Not only that, I also sell the UI kits that I have created.</p>
+                        <p>Until now, I have an interest in becoming a Web Developer or Mobile Developer, because I also enjoy slicing the designs that I have created into the web or mobile. For slicing, I usually use the Bootstrap framework and for mobile I use Flutter.</p>
+                        <p>Why am I learning programming too? Because I tend to continue learning new things. I am sure that my hard work in learning programming will pay off someday.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="header-logo">
+                <img src="assets/logo/logo_newWave_green.svg" alt="">
+            </div>
+            <div class="footer-element">
+                <div class="footer-item">
+                    <h4>About</h4>
+                    <p>NEWWAVE is an End-to-End creative company rooted in contemporary lifestyle and youth culture</p>
+                </div>
+                <div class="footer-item">
+                    <h4>Head Office</h4>
+                    <p>Conclave Wijaya, Jl. Wijaya I No.5C 7, RT.7/RW.4, Petogogan, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12170</p>
+                </div>
+                <div class="footer-item">
+                    <h4>Subscribe Email</h4>
+                    <div class="email-input">
+                        <input type="email" id="email" placeholder="your.email@example.com" required>
+                        <button type="submit">Subscribe&nbsp;<i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2024 NEWWAVE</p>
+            <div class="tnc-container">
+                <a href="">Kebijakan Privasi</a>
+                <a href="">Syarat & Ketentuan</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/apps.js"></script>
+</body>
+</html>
