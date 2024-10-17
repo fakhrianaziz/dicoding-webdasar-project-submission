@@ -1,0 +1,919 @@
+:root {
+    --lh: 1.6rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header .navbar-container {
+    width: 100%;
+    padding-block: 0.1rem;
+    padding-inline: 5rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    position: fixed;
+    background-color: white;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+header .navbar-container .nav-list .checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+header .navbar-container .nav-list #check {
+    display: none;
+}
+
+header .navbar-container .header-logo img {
+    width: 50px;
+}
+
+header .navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem 1rem;
+}
+
+header .navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header .navbar-container .nav-list li input {
+    width: 300px;
+    padding: 1rem 1rem;
+    border: 1px solid #D9DBE9;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+
+header .navbar-container .nav-list li button {
+    font-size: 14px;
+}
+
+header .navbar-container .nav-list li input[placeholder="Cari disini..."]{
+    font-size: 14px;
+}
+
+header .navbar-container .nav-list li input:focus {
+    border: 1px solid #86FF3C;
+}
+
+header .navbar-container .nav-list li a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    transition: all 0.2s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+header .navbar-container .nav-list li:hover a {
+    border-bottom: 2px solid #86FF3C;
+    color: #86FF3C;
+}
+
+header .navbar-container .nav-list ul button {
+    background-color: #86FF3C;
+    color: black;
+    border-radius: 8px;
+    border: 0px;
+    transition: all 0.2s ease-in-out;
+}
+
+header .navbar-container .nav-list ul button a {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+header .navbar-container .nav-list ul button:hover{
+    background-color: #71d533;
+}
+
+header .navbar-container .nav-list ul #loginButton:hover{
+    color: white;
+}
+
+#headerVideo {
+    margin-top: 86px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 100%; 
+    height: 80vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header .jumbotron {
+    margin-top: 86px;
+    /* background-image: url(/assets/images/bg_jumbotron.png);
+    background-size: cover;
+    background-position: bottom; */
+    color: white;
+    min-height: 80vh;
+}
+
+header .jumbotron .color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 3rem 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+header .jumbotron a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header .jumbotron .event-title h1 {
+    font-size: 80px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 70px;
+}
+
+header .jumbotron .event-title a {
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+header .jumbotron .event-title a:hover {
+    color: #86FF3C;
+}
+
+header .jumbotron .event-title .dateLocation-event {
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+}
+
+header .jumbotron .event-title .dateLocation-event p {
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+}
+
+header .jumbotron .event-title .dateLocation-event h4 {
+    font-size: 36px;
+    color: black;
+}
+
+header .jumbotron .event-title .dateLocation-event .location-event h3 {
+    font-size: 36px;
+    color: white;
+    margin: 0rem 0rem;
+}
+
+header .jumbotron .event-title .dateLocation-event {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .jumbotron .event-title .dateLocation-event .date-event {
+    padding: 0.5rem 0.5rem;
+    background-color: #fff;
+    opacity: 0.7;
+    height: fit-content;
+    border-radius: 4px;
+}
+
+header .jumbotron .event-title .dateLocation-event .date-event p, h4 {
+    color: black;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+header .jumbotron .color-overlay .highlight-event {
+    display: flex;
+    gap: 30px;
+}
+
+header .jumbotron .color-overlay .highlight-event .event-container {
+    width: 425px;
+    height: 280px;
+    border-radius: 8px;
+}
+
+header .jumbotron .color-overlay .highlight-event .event-container .event-overlay {
+    position: absolute;
+    width: 425px;
+    height: 280px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .jumbotron .color-overlay .highlight-event .event-container .event-overlay .date p, h2{
+    color: white;
+    margin: 0px 0px;
+}
+
+header .jumbotron .color-overlay .highlight-event .event-container .event-overlay .band p, h2{
+    color: white;
+    margin: 0px 0px;
+}
+
+header .jumbotron .color-overlay .highlight-event #one-ok-rock {
+    background-image: url(/assets/images/img_oor.png);
+    width: 425px;
+    height: 280px;
+    border-radius: 8px;
+    transition: transform .5s;
+}
+
+header .jumbotron .color-overlay .highlight-event #one-ok-rock:hover {
+    transform: scale(1.1);
+}
+
+header .jumbotron .color-overlay .highlight-event #radwimps {
+    background-image: url(/assets/images/img_radwimps.png);
+    width: 425px;
+    height: 280px;
+    border-radius: 8px;
+    transition: transform .5s;
+}
+
+header .jumbotron .color-overlay .highlight-event #radwimps:hover {
+    transform: scale(1.1);
+}
+
+main aside {
+    display: none;
+}
+
+main aside.aside-show {
+    position:fixed ;
+    margin-top: auto;
+    margin-bottom: 100px;
+    height: 300px;
+    width: 400px;
+    inset-block: 0;
+    inset-inline-end: 0;
+    background-color: white;
+    border-radius: 8px 0px 0px 8px;
+    box-shadow: 2px 20px 30px rgba(0, 0, 0, 0.121);
+}
+
+main aside.aside-show .social-media a{
+    text-decoration: none;
+    color: black;
+}
+
+main aside.aside-show .social-media {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem 1rem;
+    border-radius: 8px 0px 0px 8px;
+    box-shadow: 2px 20px 30px rgba(0, 0, 0, 0.121);
+}
+
+main aside.aside-show .social-media .aside-container .avatar img{
+    width: 100px;
+    height: 100px;
+    border-radius: 6px 6px;
+    border: 1px solid #D9DBE9;
+    object-fit: cover;
+}
+
+main aside.aside-show .social-media .aside-container .avatar-container{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+main aside.aside-show .social-media .aside-container .profile-container{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    border-radius: 6px;
+    border: 1px solid #D9DBE9;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 10px;
+    gap: 15px;
+    overflow: auto;
+}
+
+main aside.aside-show .social-media .aside-container .profile-container p{
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+main aside.aside-show .social-media .non-active .avatar img {
+    width: 100px;
+    height: 100px;
+    margin: 1rem 1rem;
+    border-radius: 6px 6px;
+    border: 1px solid #D9DBE9;
+    object-fit: cover;
+}
+
+main {
+    padding-top: 3rem;
+    padding-inline: 5rem;
+}
+
+main section {
+    margin-bottom: 60px;
+}
+
+main section .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+main section .header-section .title-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+main section .header-section .title-section h2{
+    color: black;
+}
+
+main section .header-section .title-section a{
+    color: black;
+    padding: 0.2rem 1rem;
+    border: 1px solid #71d533;
+    border-radius: 99px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+main section .header-section .title-section a:hover{
+    color: white;
+    padding: 0.2rem 1rem;
+    background-color: #71d533;
+    border: 1px solid #71d533;
+    border-radius: 99px;
+    text-decoration: none;
+}
+
+main section .header-section .arrow-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+main section .header-section .arrow-button .icon-button{
+    padding: 0.5rem 1rem;
+    border: 1px solid #D9DBE9;
+    border-radius: 4px;
+    height: fit-content;
+    transition: all 0.2s ease-in-out;
+}
+
+main section .header-section .arrow-button .icon-button:hover{
+    border: 1px solid #86FF3C;
+}
+
+main section .card-section {
+    display: flex;
+    max-width: 2560px;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+main section .card-section a {
+    text-decoration: none;
+}
+
+main section .card-section .card-item {
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 100%;
+    border: 1px solid #D9DBE9;
+    border-radius: 8px;
+}
+
+main section .card-section .card-item .event-image{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px 8px 0px 0px;
+    margin-bottom: 0px;
+}
+
+main section .card-section .card-item .event-item {
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0rem;
+}
+
+main section .card-section .card-item .event-item .event-title{
+    --max-lines: 3;
+    max-width: 300px;
+    position: relative;
+    max-height: calc(var(--lh) * var(--max-lines));
+    overflow: hidden;
+    padding-right: 1rem;
+}
+
+main section .card-section .card-item .event-item .event-title::before{
+    max-width: 300px;
+    position: absolute;
+    content: "...";
+    bottom: 0;
+    right: 0;
+}
+
+main section .card-section .card-item .event-item .event-title::after{
+    max-width: 300px;
+    position: absolute;
+    content: "";
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+main section .card-section .card-item .event-item .location-container p{
+    color: #7B8794;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+main section .card-section .card-item .event-item p{
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+main section .card-section .card-item .event-item h1{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+main section .card-section .card-item .event-item .pricing-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+main section .card-section .card-item .event-item .pricing-container .pricing p{
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+    color: #7B8794;
+}
+
+main section .card-section .card-item .event-item .pricing-container .pricing h3{
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+    color: #F33A3A;
+}
+
+main section .card-section .card-item .event-item .pricing-container p{
+    color: #34C369;
+}
+
+main section .card-section .card-item .event-item h1{
+    font-size: 26px;
+}
+
+main section .cta-section {
+    background-image: url(/assets/images/img_item_ctaEvent.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    width: 100%;
+    min-height: 40vh;
+    border-radius: 8px;
+    position: relative;
+}
+
+main section .cta-section .cta-overlay {
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 3rem 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main section .cta-section .cta-overlay a {
+    color: white;
+    text-decoration: none;
+    margin: 0rem 0rem;
+    transition: all 0.2s ease-in-out;
+}
+
+main section .cta-section .cta-overlay a:hover {
+    color: #86FF3C;
+}
+
+main section .cta-section .cta-overlay .cta-event h1 {
+    color: white;
+    font-size: 96px;
+    margin: 0rem 0rem;
+}
+
+main section .cta-section .cta-overlay .cta-event h5 {
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0rem 0rem;
+}
+
+footer {
+    background-color: #F5F7FA;
+}
+
+footer .footer-container {
+    padding: 3rem 5rem;
+}
+
+footer .footer-container .footer-element {
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+    gap: 50px;
+}
+
+footer .footer-container .footer-element .footer-item {
+    width: calc(100%/3);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+footer .footer-container .footer-element .footer-item .email-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .footer-container .footer-element .footer-item .email-input input{
+    width: 50%;
+    padding: 1rem 1rem;
+    border: 1px solid #D9DBE9;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+
+footer .footer-container .footer-element .footer-item .email-input input[placeholder="your.email@example.com"]{
+    font-size: 14px;
+}
+
+footer .footer-container .footer-element .footer-item .email-input input:focus{
+    border: 1px solid #86FF3C;
+}
+
+footer .footer-container .footer-element .footer-item .email-input button{
+    padding: 1rem 1rem;
+    font-size: 16px;
+    background-color: #86FF3C;
+    border: 0px transparent;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+footer .footer-container .footer-element .footer-item .email-input button:hover{
+    background-color: #71d533;
+    color: white;
+}
+
+footer .copyright {
+    padding: 1rem 5rem;
+    background-color: #86FF3C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .copyright .tnc-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .copyright .tnc-container a {
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1440px) {
+    header .jumbotron .color-overlay .highlight-event .event-container {
+        width: 300px;
+        height: 198px;
+        border-radius: 6px;
+    }
+
+    header .jumbotron .color-overlay .highlight-event .event-container .event-overlay {
+        width: 300px;
+        height: 198px;
+        border-radius: 6px;
+    }
+
+    header .jumbotron .color-overlay .highlight-event #one-ok-rock {
+        width: 300px;
+        height: 198px;
+        border-radius: 6px;
+    }
+
+    header .jumbotron .color-overlay .highlight-event #radwimps {
+        width: 300px;
+        height: 198px;
+        border-radius: 6px;
+    }
+}
+
+@media screen and (max-width: 1146px) {
+    main section .card-section {
+        max-width: 1000px;
+    }
+
+    main section .card-section #card-5{
+        display: none;
+    }
+
+    main section .card-section .card-item {
+        flex-basis: 0;
+        flex-shrink: 1;
+        border-radius: 6px;
+    }
+
+    main section .card-section .card-item .event-image{
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 6px 6px 0px 0px;
+        margin-bottom: 0px;
+    }
+
+    main section .card-section .card-item .event-item h1{
+        font-size: 20px;
+    }
+
+    main section .card-section .card-item .event-item .event-title{
+        --max-lines: 2.3;
+    }
+
+    main section .card-section .card-item .event-item .pricing-container{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    main section .card-section .card-item .event-item .pricing-container p, h3{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    header .jumbotron .color-overlay .highlight-event {
+        display: none
+    }
+
+    footer .footer-container .footer-element .footer-item .email-input{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer .footer-container .footer-element .footer-item .email-input input{
+        width: 100%;
+    }
+
+    footer .footer-container .footer-element .footer-item .email-input button{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .navbar-container {
+        width: 100%;
+        padding-block: 0.1rem;
+        padding-inline: 2rem;
+    }
+
+    header .navbar-container .nav-list .checkbtn {
+        display: block;
+        order: 1;
+    }
+
+    header .navbar-container .nav-list .checkbtn i {
+        color: black;
+    }
+
+    header .navbar-container .nav-list ul {
+        position: fixed;
+        top: 41px;
+        right: -100%;
+        background-color: white;
+        border-top: 1px solid #D9DBE9;
+        width: 100%;
+        height: 60vh;
+        padding: 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+    }
+
+    header .navbar-container .nav-list ul li {
+        margin: 20px 0px;
+    }
+
+    header .navbar-container .nav-list ul li a{
+        font-size: 20px;
+    }
+
+    header .navbar-container .nav-list #check:checked ~ ul {
+        right: 0;
+    }
+
+    #headerVideo {
+        margin-top: 58px;
+        height: 60vh;
+    }
+    
+    header .jumbotron {
+        margin-top: 58px;
+        color: white;
+        min-height: 60vh;
+    }
+
+    header .jumbotron .color-overlay {
+        height: 60vh;
+        padding: 2rem 2rem;
+    }
+
+    main {
+        padding-top: 2rem;
+        padding-inline: 2rem;
+    }
+
+    main section .card-section #card-4, #card-5{
+        display: none;
+    }
+
+    main section .cta-section .cta-overlay {
+        height: 40vh;
+        padding: 2rem 2rem;
+    }
+
+    main section .cta-section .cta-overlay .cta-event h1 {
+        font-size: 60px;
+    }
+
+    footer .footer-container {
+        padding: 2rem 2rem;
+    }
+
+    footer .footer-container .footer-element {
+        align-items: baseline;
+        gap: 20px;
+    }
+
+    footer .copyright {
+        padding: 1rem 2rem;
+    }
+
+    footer .copyright p, a{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 509px) {
+    header .navbar-container {
+        width: 100%;
+        padding-block: 0.1rem;
+        padding-inline: 1rem;
+    }
+
+    #headerVideo {
+        background-position: center;
+        margin: 58px auto;
+    }
+
+    header .jumbotron .color-overlay {
+        height: 60vh;
+        padding: 2rem 1rem;
+    }
+
+    header .jumbotron .color-overlay .event-title .dateLocation-event .date-event p{
+        font-size: 18px;
+    }
+
+    header .jumbotron .color-overlay .event-title .dateLocation-event .date-event h4{
+        font-size: 36px;
+    }
+
+    header .jumbotron .color-overlay .event-title .dateLocation-event .location-event h3{
+        font-size: 36px;
+    }
+
+    header .jumbotron .color-overlay .event-title h1{
+        font-size: 60px;
+    }
+
+    main {
+        padding-top: 2rem;
+        padding-inline: 1rem;
+    }
+
+    main aside {
+        display: none;
+    }
+
+    main section .card-section #card-3, #card-4, #card-5{
+        display: none;
+    }
+
+    main section .header-section .title-section{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    main section .header-section .title-section h2{
+        font-size: 20px;
+    }
+
+    main section .header-section .arrow-button{
+        display: none;
+    }
+
+    footer .footer-container {
+        padding: 2rem 1rem;
+    }
+
+    footer .footer-container .footer-element {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer .footer-container .footer-element .footer-item {
+        width: 100%;
+    }
+
+    footer .copyright {
+        flex-direction: column;
+        gap: 20px;
+        padding: 1rem 1rem;
+    }
+
+    footer .copyright .tnc-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
